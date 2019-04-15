@@ -1,0 +1,31 @@
+{
+  "name": "learn-babel",
+  "version": "1.0.0",
+  "description": "learn babel ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qqqiyuan/learn-babel.git"
+  },
+  "keywords": [
+    "babel",
+    "plugin"
+  ],
+  "author": "qiyuan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qqqiyuan/learn-babel/issues"
+  },
+  "homepage": "https://github.com/qqqiyuan/learn-babel#readme",
+  "dependencies": {
+    "antd": "^3.16.3"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-types": "^6.26.0"
+  }
+}
