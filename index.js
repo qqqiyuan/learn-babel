@@ -4,7 +4,10 @@ const plugin = require('./plugins/load-by-demand.js')();
 const visitor = plugin({types});
 
 const code = `
-  import { Select as MySelect, Pagination } from 'antd';
+  import { Select as MySelect, Alert } from 'antd';
+  import * as UI from 'antd';
+  import { Select as MyTestSelect, TestAlert } from 'antd-test';
+  import * as TestUI from 'antd-test';
 `;
 
 const result = babel.transform(code, {
@@ -12,13 +15,12 @@ const result = babel.transform(code, {
     [
       visitor,
       {
-        'customSourceFunc': componentName => (`./node_modules/antd/lib/${componentName}`)
+        'libraryName': 'antd',
+        'customSourceFunc': componentName => (`./node_modules/antd/lib/${componentName}/index.js`)
       }
     ]
   ],
 });
 
-console.log('transform code result:');
+console.log('--------transform code result--------');
 console.log(result.code);
-// import MySelect from './node_modules/antd/lib/Select';
-// import Pagination from './node_modules/antd/lib/Pagination';
